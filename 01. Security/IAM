@@ -1,0 +1,79 @@
+# **Security** #
+
+## **Principle of Least Privilege** ##
+- Minimum permissions necessary to perform their tasks
+- Reduces the potential impact of compromised credentialls and enforces a secure envinroment
+- Assign permissions to groups, review and adjust policies regularly
+
+---
+
+## **IAM Components** ## 
+User, Groups, Roles, Policies and Identity Providers
+
+### **Users** ###
+Individual entity with a defined username;
+
+#### **Access Types** ####
+
+- Programatic Access: Access Key and Secret Key which combined allow a entity to access AWS services
+- AWS Management Console Access
+#### **Root user** ####
+Will always be the "root" user. That user has full access and should be secured.
+
+### **Groups** ###
+Collection of **users** defined by a **group name** which has a **policy** attached. The group name can be changed which will also affect the Amazon Resource Name associated with it.
+
+### **Roles** ###
+AWS identity with permission policies. Can be assumed by any entity that needs it.\
+**Use**
+- Delegate access to entities that don't normally have access to your AWS resource
+- Don't need to share long-term credentials
+- Reduces the risk of having keys inside the code
+
+
+### **Policies** ###
+Set of permissions to provide an **effect** (allow/deny) to an **action** on an **resource**. Policies can be created by copying **AWS Policy**, **Policy Wizard** or **Self Defined**\
+Can be assigned to users, groups, roles and resources
+**Types of policy**\
+- Managed Policies
+  - Standalone
+  - Assignable to anything except resources
+  - Can be used on multiple entities
+- Inline Policies
+  - Embedded in the target entity
+  - Not reusable
+  - Can edit
+
+**Policy sources**
+- AWS Managed
+- Customer Managed
+  
+
+**Types of Assignment**
+- **Identity based**: Assigned to entities, allows the entity to perform an action X on a resource Y
+- **Resource based**: Assigned to resources, allows the user X to perform an action Y on that resource
+
+**Default Policies**
+Default deny, least previlige principle
+
+**Example**
+```json
+{
+    "Version": "2024-01-01",
+    "Statement": [
+        "Effect":"Allow",
+        "Action": "ec2:Describe*",
+        "Resource": "*",
+    ],
+    ...
+} 
+```
+
+**Best Practises**
+- Regularly review
+- Use AWS Cloud Trail for auditing and monitoring
+- Rotate access keys and other credentials regularly
+- Use Groups
+- Enable MFA
+- Create strong password policies
+- LEAST PRIVILEGE!
