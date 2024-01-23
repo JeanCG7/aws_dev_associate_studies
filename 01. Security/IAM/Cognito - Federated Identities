@@ -1,0 +1,18 @@
+# Federated Identities #
+Allow integrations with external identity databases such as Apple ID, Google, Microsoft, etc
+- Simplify access management
+- Reduce administrative overhead
+- Enhance security
+
+**OIDC** 
+- Authentication layer built on top of OAuth 2.0 for identity verification;
+- Role-based Access: Assign IAM Roles to federated users for accessing AWS resources;
+
+**IAM STS**
+- Create trusted users with temp credentials
+
+**Best Practises**
+- AWS SSO for centralized access management;
+- Principle of Least Privilege for federated users;
+- Monitor and audit federated users access with CloudTrail;
+- MFA and strong passwords;

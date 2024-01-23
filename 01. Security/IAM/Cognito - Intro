@@ -1,0 +1,36 @@
+# Cognito #
+Directory to sign up and sign in users, store user profiles and have a customizable user interface. 
+
+## User Pools ##
+Store and manage user profiles for authentication
+
+## Identity Pools ##
+Associate temporary AWS credentials for authorization
+
+## Hosted User Interface ##
+Customizable authorization and authentication interface for web and mobile
+
+## Custom Attributes and Triggers ##
+- **Custom Attributes**: define custom attributes to store additional user information
+- **Pre-build Triggers**: customize user pool workflows using AWS Lambda triggers
+  - pre-sign-up
+  - pre-authentication
+  - post-authentication
+  - custom message
+
+## Cognito Identity Pools ##
+**Role Mapping And Rules**
+- **Role Mapping**: Define rules to map identities to different IAM roles based on user attributes or claims
+- **Access Control** Implement access control for aws resources using IAM policies;
+
+# Hosted UI - Key Features #
+Allow to change the interface to match your application's branding. Decrease development time and effort by providing a pre-built, customizable user interface.
+**Scalability** allows authentication and authorization for applications of any size;
+
+## Best Practises ##
+- Enable MFA and enforce strong password policies;
+- Principle of Least Privilege;
+- Use CloudTrail;
+
+
+
