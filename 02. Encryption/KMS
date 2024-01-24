@@ -1,0 +1,28 @@
+# Key Management Service #
+Allows symmetric and asymmetric encrypt, i.e, the same key can be used to encrypt and decrypt or have different public and private keys;
+
+**Purpose**: Management encryption keys for data protection and compliance;\
+**Features**: Key creation, rotation, management and access control;\
+**Integrations**: Work with various AWS services, such as Amazon S3, Amazon EBS and Amazon RDS;\
+**Compliance**: Supports FIPs 140-2 validated hardware security modules (HSMs);\
+
+## Concepts ##
+
+**CMK**: a logical representation of a cryptographic key used for encryption and decryption;\
+**Key Material**: actual cryptographic material (random bits and bytes) used for encryption and decryption, stored securely in KMS;\
+**Envelope Encryption**: process of encrypting plaintext data with a data key, and then encrypting the data key itself with a CMK;\
+**Key Policies**: JSON  document that define permissions and controls for a CMK;\
+
+## Access Control and Permissions ##
+IAM Policies: attach policies to IAM entities;
+Key Policies: permissions and controls for a specific CMK;
+Grants: delegate specific permissions to other AWS Accounts or AWS Services;
+
+## KMS Integrations ##
+S3, EBS, RDS, Lambda, etc
+
+## Best Practises ##
+- **Separate keys per application or environment**: different CMKs for each application or environment to minimize the blast radius in case of a security breach;
+- **Enable key rotation**: Regularly rotate keys;
+- **Principle of least privilege**;
+- **Monitor and audit**;

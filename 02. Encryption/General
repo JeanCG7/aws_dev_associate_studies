@@ -1,0 +1,45 @@
+# Encryption #
+
+## At-rest ##
+Use by default in many AWS services, optional to others. Data isn't being transited encrypted, it's just when stored.
+Key Management: **AWS Key Management Service (KMS)** for managing encryption keys;
+- Definition: protecting data when it is stored;
+- Purpose: prevent unauthorized access to sensitive information in case of data breaches or physical theft;
+
+**How to Implement?**
+
+It depends on the service, e.g:
+- **S3**: Use server-side encryption with S3-managed keys (SSE-S3), KMS-managed keys (SSE-KMS) or customer-provided keys (SSE-C).
+- **EBS**: Encrypt EBS volumes and snapshots using KMS keys;
+- **RDS**: Enable encryption at rest for database instances and snapshots;
+- **Redshift**: Encrypt data within Redshift clusters using KMS keys or hardware security modules (HSMs);
+- **DynamoDB**: Data always encrypted at rest, you can choose any key;
+
+Key types
+
+- AWS Owned Key: Managed by AWS, no KMS involved;
+- AWS Managed Key: Created and managed by AWS, stored in KMS;
+- Customer Managed Key: Created, owned and managed by you, stored in KMS;
+  
+## In-transit ##
+All communication with AWS Services is encrypted in-flight. The network traffic between AWS data centers is transparently encrypted at the physical layer.
+- Definition: protecting data while it is being transmitted between systems or services;
+- Purpose: prevent data interception, eavesdropping or tampering during transmission;
+- Protocols: TLS/SSl, HTTPS and other secure communication protocols;
+
+**How to Implement?**
+
+It depends on the service, e.g:
+- **Amazon API Gateway**: Use HTTPs for secure communication between clients and API Gateway;
+- **AWS Transfer Family**: Use SFTP, FTPS or HTTPs to securely transfe files to and from Amazon S3 or Amazon EFS;
+- **Amazon VPC**: Implement AWS Site-to-Site VPN or AWS Direct Connect for secure connections between on-premises and AWS environments;
+- **Amazon RDS**: Use SSL/TLS to encrypt connections between clients and RDS instances;
+- **API/CLI**: All communication is encrypted using standard TLS encryption;
+
+## Best Practises ##
+- Both types are crucial for securing your data in AWS;
+
+## Further reading ##
+- AWS Security Best Practises
+- AWS Well-Architected Framework
+- AWS Enscryption SDK

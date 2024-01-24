@@ -1,0 +1,23 @@
+# Certificate Manager #
+Allows to provision certification to TLS.
+- **Provisioning**: request and obtain public SSl/TLS certificates or import your existing ones;
+- **Automatic renewals**: ACM automatically renews managed certificate before they expire, ensuring continuous security;
+- **Private certificates**: Issue and manage private certficate with ACM;
+- **Integration with AWS services**: Integrate with CloudFront, Elastic Load Balancing, Amazon API Gateway and more;
+- **Secure and compliant**: handles sthe secure storage, management and deployment of certificates;
+
+## Life Cycle ## 
+Request -> Validation -> Deployment -> Monitoring -> Renewal
+
+- Validation: for public certificates, domain ownership must be validated through email, DNS or CNAME records;
+- Deployment: Integrate the certificate with AWS services, such as CloudFront or Elastic Load Balancing;
+- Monitoring: Use Amazon CLoudWatch and AWS CloudTrail to monitor certificate-related events and metrics;
+- Renewal: ACM automatically handles the renewal of public certificates, while private certificate renewals are user management;
+
+## Benefits ##
+- Cost-effective: No additional cost;
+- Time-saving: Reduces administrative overhead;
+- Improved security: Automatic certificate renewals reduce the risk of certificate expiration and downtime;
+- Enchanced compatibility: Compatible with modern browsers and clients;
+- Simplified Management;
+- 
