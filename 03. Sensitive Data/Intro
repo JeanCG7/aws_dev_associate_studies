@@ -1,0 +1,30 @@
+## Data Classification Fundamentals ##
+Defined as the **categorizing data based on sensitivity and criticality** to identify appropriate **security controls and comply with regulatory requirements**. It's necessary to classify data in order to have **improved data security, risk management and regulatorly compliance**. 
+
+Some classifications levels:
+- Public
+- Internal
+- Confidential
+- Highly Confidential
+
+How to classify data in AWS?
+1. Identify types and sources;
+2. Define classification and categories based on sensitivity and criticality;
+3. Classify using automated tools or manual processes;
+4. Implement security controls and policies based on classification levels;
+5. Regularly review and update data classification to maintain accuracy and relevance;
+
+Secure Credential Handling in AWS
+- **AWS Secret Manager**
+- **AWS Key Management Service (KMS)**
+- **AWS Identify and Access Management(IAM)**
+- **AWS Security Token Service (STS)**
+    - Temporary security credentials for short-term access;
+
+**Best practises**
+- NO CREDENTIALS ON CODE OR CONFIG FILE;
+- IAM roles for EC2 instances and other AWS services;
+  - Instead of giving straight forward a key to a developer, create a instance that he can access to comunicate with a specific service;
+- Rotate access keys, passwords and oteher secrets regularly;
+- Limit permissions following the principel of least privilege;
+- Implement MFA for sensitive operations;
