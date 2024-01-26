@@ -21,7 +21,7 @@ Grants: delegate specific permissions to other AWS Accounts or AWS Services;
 ## KMS Integrations ##
 S3, EBS, RDS, Lambda, etc
 
-## Best Practises ##
+## Best Practices ##
 - **Separate keys per application or environment**: different CMKs for each application or environment to minimize the blast radius in case of a security breach;
 - **Enable key rotation**: Regularly rotate keys;
 - **Principle of least privilege**;

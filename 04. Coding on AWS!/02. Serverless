@@ -1,0 +1,46 @@
+# AWS Serverless Application Model (SAM) #
+It's a open-source framework for building serverless applications on AWS.\
+**Benefits**: Simplify deployment, enhance local testing and manage resources more efficiently;\
+**Key Components**:
+- SAM template
+- SAM CLI
+- SAM policty templates
+
+## SAM Template ##
+YAML/JSON configuration file that defines your serverless application and its resources. Are a extension of AWS CloudFormation templates;\
+**Components**:
+- Global
+- Resources
+- Parameters
+- Outputs
+
+## SAM CLI ## 
+Command line interface for developing, testing and deploying SAM applications;
+**Features**:
+- Local testing;
+- Debugging;
+- Packaging;
+- Deploying;
+**Integration**: Worh with many AWS sservices like Lambda, API Gateway, etc;
+
+## SAM Policy Templates ##
+Predefined AWS Identity and Access Management (IAM) policy templates to streamline permissions management;\
+**Benefits**: Simplify and standardize IAM policies, reduce human errors and improve security;\
+**Examples**:
+- AWSLambdaBasicExecutionRole;
+- AmazonDynamoDBFullAccess;
+- AmazonS3ReadOnlyAccess;
+
+## Local Testing and Debugging ##
+**SAM Local**: allow to run and test serverless application locally in a Lambda-like environment;\
+**Event Simulation**: simulate API Gateway or other event sources to trigger the Lambda function;\
+**Debugging**: attach debuggers to Lambda function for easier troubleshooting;\
+
+## Packaging and Deployment ##
+**SAM Package**: automates process of uploading your application to S3 and generates a new SAM template for deployment;\
+**SAM Deploy**: deploys the generated SAM template, creating or updating the necessary AWS resources;
+
+## Best Practices ## 
+**Code Organization**: Modular approach to organize application code and resources;
+**Monitoring**: CloudWatch and AWS X-Ray;
+**Security**: Least privilege and managed policies when possible!

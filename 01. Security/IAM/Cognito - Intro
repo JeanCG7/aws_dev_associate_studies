@@ -27,7 +27,7 @@ Customizable authorization and authentication interface for web and mobile
 Allow to change the interface to match your application's branding. Decrease development time and effort by providing a pre-built, customizable user interface.
 **Scalability** allows authentication and authorization for applications of any size;
 
-## Best Practises ##
+## Best Practices ##
 - Enable MFA and enforce strong password policies;
 - Principle of Least Privilege;
 - Use CloudTrail;

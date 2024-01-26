@@ -11,7 +11,7 @@ Allow integrations with external identity databases such as Apple ID, Google, Mi
 **IAM STS**
 - Create trusted users with temp credentials
 
-**Best Practises**
+**Best Practices**
 - AWS SSO for centralized access management;
 - Principle of Least Privilege for federated users;
 - Monitor and audit federated users access with CloudTrail;

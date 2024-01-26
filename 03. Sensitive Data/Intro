@@ -21,7 +21,7 @@ Secure Credential Handling in AWS
 - **AWS Security Token Service (STS)**
     - Temporary security credentials for short-term access;
 
-**Best practises**
+**Best Practices**
 - NO CREDENTIALS ON CODE OR CONFIG FILE;
 - IAM roles for EC2 instances and other AWS services;
   - Instead of giving straight forward a key to a developer, create a instance that he can access to comunicate with a specific service;

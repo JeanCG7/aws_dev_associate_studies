@@ -69,7 +69,7 @@ Default deny, least previlige principle
 } 
 ```
 
-**Best Practises**
+**Best Practices**
 - Regularly review
 - Use AWS Cloud Trail for auditing and monitoring
 - Rotate access keys and other credentials regularly

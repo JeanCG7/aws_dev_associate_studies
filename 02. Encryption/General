@@ -36,10 +36,10 @@ It depends on the service, e.g:
 - **Amazon RDS**: Use SSL/TLS to encrypt connections between clients and RDS instances;
 - **API/CLI**: All communication is encrypted using standard TLS encryption;
 
-## Best Practises ##
+## Best Practices ##
 - Both types are crucial for securing your data in AWS;
 
 ## Further reading ##
-- AWS Security Best Practises
+- AWS Security Best Practices
 - AWS Well-Architected Framework
 - AWS Enscryption SDK
