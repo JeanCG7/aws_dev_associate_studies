@@ -1,0 +1,34 @@
+# AWS SDKs Overview #
+
+It's a collection of libraries and tools that assists with AWS service integration in your preferred programming language;\
+**Key Features**: Simplified API interactions, automatic error handling and efficiente resource management;\
+**Configuration**: Set up AWS credentials and configure the SDK to connect to the appropriate AWS region;\
+**Usage**: Import the required AWS service client, create instances and interact with AWS services programmatically through your application code;\
+**Features**:
+- **Automatic retries**: SDKs handle request retries for intermittent erros, improving application reliability;
+- **Pagination**: Manage large result sets using built-in pagination suport.
+- **Authentication**: Automatically sign request with AWS credentials to ensure communication;
+
+## AWS APIs ##
+- Application Programming Interface;
+- Set of rules and protocols that enable communication between software components;
+- **Restful APIs**: AWS APIs follow the REST architecture style, utilizing standard HTTP methods;
+- **AWS API Gateway**: A managed service to create, publish and manage APIs for your applications;
+ 
+### How to use ###
+- Direct API Calls: HTTP requests using RESTful methods (GET, POST, PUT, DELETE);
+- Authentication: sign API request using AWS Signature Version 4;
+- Rate limiting: API rate limits and implement proper error handling for rate-limited requests;
+  
+## Best Practises ## 
+- **Error Handling**: Implement proper error handling an dretry mechanisms for transient errors;
+- **Performance**: Use connection pooling and optimize API calls for better performance;
+- **Security**: Follow the principle of least privilege and avoid embedding AWS Credentials in application code;
+- **Read API documentations**
+
+## AWS API - Authentication ##
+- Calculated with secret key and access key are used to calculate the AUTHPARAMS to call AWS APIs;
+  - Authorization HTTP header or query string param;
+- CLI and SDK sign requests automatically!
+- Prevents data manipulation in transit and protects against replay attacks;
+

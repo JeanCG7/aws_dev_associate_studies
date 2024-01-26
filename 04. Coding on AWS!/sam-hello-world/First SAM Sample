@@ -1,3 +1,0 @@
-# First SAM Sample #
-It's possible to create a Amazon Serverless Application Model through AWS Cli. There's many templates for different languages and implementations (e.g. hello world). A template is composed of a **package** with the implementation code, in this example it's **hello-world** and some other **yaml files** used in AWS Configuration.
-In further commits more detailed descriptions about AWS Cloud Formation, Lambda and other services involved in this sample will be added.

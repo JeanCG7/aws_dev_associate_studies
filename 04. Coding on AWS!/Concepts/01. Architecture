@@ -1,0 +1,43 @@
+## Common Architectural Patterns ##
+To understand how to develop code for Applications hosted on AWS it's necessary to understand some architectural concepts. There's plenty patterns, such as:
+
+**Client-server**: Multiple clients connect to a single server to request services;\
+**Layered**: Components are organized into horizontal layers, e.g., presentation layer, application layer, data layer or database layer.\
+**MVC**: Model represents the application's data and logic. View is responsible for displaying the data to the user. Controller handles the user's input and controls the flow of data between the M and V;
+
+## Lambada 20k' View ## 
+**Definition:**: serverless compute service that runs your code in response to events;\
+**Benefits**: no server management, automatic scaling and pay-per-use pricing;\
+**Use Cases**: data processing, web backends, event-driven archs, and more;\
+
+## Common Architectural Patterns in AWS ##
+**Event-driven**: Lambda functions are triggered by events from AWS services, such as S3, DynamodDB or API Gateway;\
+**Microservices**: build decoupled, modular components that can be developed, deployed and scaled independently;\
+**Orchestration**: Use AWS Step Functions to manage complex workflows by chaining together multiple Lambda functions;\
+
+## Idempotency ##
+Ensuring that multiple executions of a function with the same input produce the same result w/o causing unintended side effects.\
+Idempotency improve reliability, simplify error handling and maintain consistency in distributed systems;\
+**Common Use Cases**: API design, retry mechanisms and data processing;
+
+### Implement Idempotency with AWS ##
+**Unique Identifiers**: Unique identifiers for each request to track and prevent duplicate processing;\
+**Idempotent APIs**: APIs with imdepotent HTTP methods (GET, PUT, DELETE);\
+**Error Handling**: Implement retry mechanisms and handle failures gracefully to maintain consistency and reliability;\
+
+## Stateful ##
+Systems that maintain the state of a user or session across multiple interactions, e.g. cookies, tokens;\
+- Better UX
+## Stateless ##
+Systems that do not store any state information and treat each interaction as independent;\
+- Easier to manage and scale
+
+## AWS Lambda and State Management ##
+**Stateless by default**: Lambda functions are stateless, meaning they do not store any state information between invocations;\
+**External state storage**: Use services like DynamoDB, S3 or RDS to store and manage state information;
+
+### Is it possible to have Stateful Architecture? ##
+Yes, using different services to store and manage state, but it's necessary to balance the trade-offs between stateful and stateless architectures based on your applications requirements and constraints;\
+
+**AWS Step Functions**: Orchestrate Lambda functions in stateful workflows, maintaining state between invocations;\
+**Amazon ElastiCache**: In-memory data stores like Redis or Memcached for fast, temporary state storage between Lambda invoications;\
