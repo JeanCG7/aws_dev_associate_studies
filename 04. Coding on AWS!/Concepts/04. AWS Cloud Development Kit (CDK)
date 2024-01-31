@@ -1,0 +1,30 @@
+# AWS CDK #
+Open-source software development framework for defining cloud infrastructure in your favorite programming language and provisioning it through AWS CloudFormation. Considered as higher level and capable of creating more complex applications.
+**Benefits**: familiar programming languages, create reusable components and utilize powerful abstraction.
+
+## Concepts ##
+- Constructs: basic building blocks which represents AWS resources or group of resources.
+- Stacks: units of deployment that contain one or more constructs and are deployed using AWS CloudFormation;
+- App: a collection of one or more stacks, representing your entire application;
+
+## Writing Constructs and Stacks ##
+- Define Constructs
+- Create Stacks
+- Compose APPs
+
+## CDK Libraries ##
+- AWS Construct Library: collection of constructs that represent AWS resources and services;
+- High-level constructs (L2): convenient abstractions and sensible defaults for common use cases;
+- Low-level constructs (L1): provide direct access to AWS CloudFormation resources;
+  
+## Testing and Deployment ##
+- Unit testing;
+- Synthesize: generate AWS CloudFormation templates from your CDK code using the cdk synth;
+- Deploy: cdk deploy command to create or update the required AWS resource via AWS CloudFormation;
+
+## Best practises ##
+- Use cdk delete instead of deleting resources individually;
+- **Code Organization**: Organize code using a modular approeach, separating concers and improving maintainability;
+- **Reusability**: create constructs and share them accross your organization or the wider community;
+- **Security**: Least privillege;
+-  
