@@ -1,0 +1,28 @@
+# Elastic Beanstalk #
+Fully managed service that allows you to quickly deploy, manage and scale applications;\
+**Features**: Automated infrastructure provisioning, application deployment, monitoring and scaling;
+
+## Responsibility ##
+**User Manages**: Code Development;\
+**AWS Manages**: Capacity provisioning, load balancing, scaling and application health monitoring;\
+
+## Concepts ##
+**Applications**: collection of EBS components, such as environments, versions and configurations;\
+**Environments**: specific application deploymen with a unique URL and an associated AWS infrastructure;\
+**Application versions**: unique, labeled iterarion of your application code, stored in Amazon S3;\
+
+## Configuration ##
+**Environment Tiers**: Choose between the Web Server tier for web applications or the Worker tier for background processing;\
+**Configuration Templates**: Save environment settings and configurations for easy reuse accross multiple environments;\
+**Customization**: Modify settings, such as intance type, auto-scaling group settings and custom domain names;\
+
+## Deployment Strategies ##
+**All-at-Once**: Update all instance simultaneously, causing a brief downtime;\
+**Rolling**: Update instances in batches, maintaining partial availability. Use ELB to remove unhealty hosts from service;\
+**Rolling with Addiotional Batch**: Update instances in batches while launching an additional batch to maintain full capacity;\
+- costs more
+**Immutable**: Launch a new, full set of instances with the new version, then swap them with the old instances;\
+
+## Scaling ##
+**Auto scaling**: Automatically adjust the number of instances based on demand and custom scaling policies;\
+**Load balancing**: Distribute incoming traffic across instances using Elastic Load Balancing;\
