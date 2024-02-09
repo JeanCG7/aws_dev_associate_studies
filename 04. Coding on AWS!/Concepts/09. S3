@@ -1,0 +1,70 @@
+# S3 #
+Built to store and retrieve an amount of data from anywhere.\
+Characteristics:
+- Built to be minimal;
+- REST and SOAP;
+- Region-based pricing;
+- Fine-grained permisions;
+- Store an infinite amount of data;
+- Objects up to 5GB;
+
+## S3 Data Consistency ##
+- Read-after-write consinstency for new objetcs;
+- Eventually consistent
+  - Read-after-write might return old data;
+  - Subsequent list might not have new object;
+- New object PUT: read-after-write;
+- Overwrite PUTS and DELETES: eventually consistent;
+
+## Components ##
+### Bucket ###
+Container for objects stored in Amazon S3. Every object is stored in a bucket.\
+Purpose:
+- Organize the Amazon S3 namespace;
+- Identify the account responsible;
+- Aggregation for usage report;
+- Deployed in specific version;
+Versioning:
+- Can be configured so objects are versioned
+
+### Objects ###
+Entities stored in S3. Consists of
+- Object Data: Opaque to Amazon S3;
+- Metadata
+  - Default
+  - Custom
+- Objects can by encrypted
+
+### Keys ###
+- Unique identifier for an object;
+- Bucket + Key + Version identifies all objects;
+
+## Versioning ##
+Keeping multiple variants of an object in the same bucket; Allows for recovery of data from user action and/or app failure;\
+Must Know:
+- Soft delete;
+- Hard delete;
+- Can't unversion after enabling versioning;
+
+## Lifecycle Management##
+Manage cost through lifecycle management of objects. Set of rules that define actions that S3 applies to a group of objects;\
+**Actions**:
+- **Transation**: transition between classes;
+- **Expiration**: define when object expires, delete it;
+
+
+## S3 Storage Class ##
+- General purpose: 99.99% availability, frequently accessed data (more once a month) with miliseconds acccess;
+- Infrequente Access:
+  - S3 Standard-Infrequente Access: 99.9% availability;
+  - S3 One Zone-Infrequente Access: 99.5%;
+- Intelligent-Tiering;
+- Glacier
+  - Instant Retrieval:
+  - Flexible Retrieval:
+  - Glacier Deep Archive:
+- Reduced Redundancy;
+
+![alt text](imgs/image.png)
+![alt text](imgs/image-1.png)
+
