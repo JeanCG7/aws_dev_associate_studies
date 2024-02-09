@@ -1,0 +1,20 @@
+## Data Consistency ##
+Accuracy and reliability of data stored in a system.\
+**Examples**: 
+- RDS: relational databases;
+- DynamoDB: NoSQL database;
+- ElastiCache: In-memory caching service;
+
+## Caching ##
+- Storing frequently accessed data in memory or disk;
+- Speed up web applications, reduce database load and improve UX;
+- **Invalidation**: removing cached data when it becomes invalid or stale;
+- **Examples**:
+  - ElastiCache: TTL feature;
+  - CloudFront: manual invalidation, scheduled invalidation and real-time invalidation;
+  - Lambda: flexible way to invalidate cache entries based on custom rules, such as time-based, event-base or used-based;
+
+**Best Practises when CRUDing on AWS**
+- Use managed database services;
+- Use caching services to reduce database load and improve performance;
+- Use cache invalidation to ensure data freshness and consistency;
