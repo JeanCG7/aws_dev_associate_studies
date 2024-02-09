@@ -1,0 +1,12 @@
+# EC2 #
+Scalable compute service that allows you to launch and manage virtual servers in the AWS Cloud.\
+**IAM Roles**: Securely grant permissions to applications and services running on your EC2 instnaces, without sharing long-term AWS access keys;
+
+## Benefits of using IAM roles with EC2 ##
+**Security**: eliminate the need to store AWS access keys on your instances, reducing the risk of unauthorized access;\
+**Granularity**: grant specific permissions to your instances (least privillege);\
+**Flexibility**: easily update and rotate permissions by modifying the IAM role w/o the need to redeploy your instances;\
+
+## Benefits and Use Case ##
+**AWS SDK Integration**: The AWS SDKs automatically discover and use the IAM role credentials when running on an EC2 instance;\
+**No Explicit Credential Management**: There's no need to hardcore or managed AWS access keys within your code;\
